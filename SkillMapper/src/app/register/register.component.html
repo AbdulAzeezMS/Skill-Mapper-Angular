@@ -1,0 +1,52 @@
+
+	<div class="registration">
+        <header>
+    <a><font face = "WildWest" size="8">SKILL MAPPER </font></a>
+    <font face = "Verdana" size="5">Registration Form</font>
+        </header>
+        <div class="registerbox">
+            <img src="register.jpg" class="register">
+    <h1>Register Here</h1>
+    <form>	
+                <p>First Name</p> 
+                <input type='text' name="fname" placeholder="First Name" id='fname' onkeyup="firstname(this.value)" title="There is no characters & Numbers in the first name">
+                <p>Last Name</p>
+                <input type="text" name="lname" placeholder="Last Name" id='lname' onkeyup="lastname(this.value)" title="There is no characters & Numbers in the last name" >
+                <p>Email ID</p>
+                <input type='email' name="email"  placeholder="eg:xyz12@abc.com" id='email' onkeyup="emailid(this.value)">	
+                <p>Gender</p>
+                <select name="gender" id='gender' onchange='gen(this.value);' title="Please select your Gender" >
+                    <option value="">Select your gender</option> 
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="others">others</option>
+                </select>
+                <p>Date Of Birth</p>
+                <input type="date" name="dob" >
+                <p>Address</p>
+                <input type='text' name="address" id='address' onkeyup="addres(this.value)" placeholder="Permanent Address" >
+                 <p>Skills</p>
+                <select name="skills" id="f" onchange='skill(this.value);' title="Please select your skills" >
+                    <option value="">Select your Skills</option> 
+                    <option value="c">C</option>
+                    <option value="c++">C++</option>
+                    <option value="cjava">Core Java</option>
+                    <option value="html">HTML</option>
+                    <option value="node">Node</option>
+                    <option value="angular">Angular</option>
+                    <option value="others">Others</option>
+                </select>
+                <input type="text" name="skills" id='skills' placeholder="Type your Skill" style='display:none;' onkeyup="skil(this.value)">
+                <p>Password</p>
+                <input type="password" name="password" placeholder="Enter Password" id='password' onkeyup="pasword(this.value)" title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters" >
+                <p>Confim Password</p>
+                <input type="password" name="cpassword" placeholder="Re-Enter Password" id='cpassword' onkeyup="validatepasword(this.value)" title="Confirm pasword doesn't match with password" >    
+                <p>Upload Your Resume</p><br/>
+                Select a file:<br/><input type="file" name="myFile">
+                <input type="submit" value="Submit" onclick=" return register()">
+                <input type="submit" value="Reset">
+                Already have a account ?
+               <a routerLink="/login" class="to_login">Sign In</a>
+            </form>
+        </div>	
+</div>	
